@@ -21,3 +21,11 @@ module.exports.get = async (req, res, next) => {
         next(error)
     }
 }
+module.exports.getget = async (req, res, next) => {
+    try {
+        const songs = await Song.find();
+        res.json(songs);
+    } catch (error) {
+        next(error)
+    }
+}
